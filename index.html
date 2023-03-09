@@ -15,80 +15,101 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="my-5 p-3 bg-body-secondary row fs-5">
-            <h3 class="text-center my-3">BÀI 1: TÍNH TIỀN LƯƠNG NHÂN VIÊN</h3>
-
-            <div class="col-6 mt-4">
-                <p class="fs-4">Nhập vào số ngày công và tiền lương theo ngày</p>
-                <label for="ngay-cong">Ngày công:</label>
-                <input type="number" class="form-control my-2" id="ngay-cong">
-                <label for="luong-ngay">Lương ngày:</label>
-                <input type="number" class="form-control my-2" id="luong-ngay">
+    <div class="container my-5">
+        <div class="d-flex align-items-start">
+            <div class="nav flex-column nav-pills me-3 border p-3 w-25 rounded-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <button class="nav-link active" id="bai-1-tab" data-bs-toggle="pill" data-bs-target="#bai-1" type="button" role="tab" aria-controls="bai-1" aria-selected="true">Bài 1</button>
+              <button class="nav-link" id="bai-2-tab" data-bs-toggle="pill" data-bs-target="#bai-2" type="button" role="tab" aria-controls="bai-2" aria-selected="false">Bài 2</button>
+              <button class="nav-link" id="bai-3-tab" data-bs-toggle="pill" data-bs-target="#bai-3" type="button" role="tab" aria-controls="bai-3" aria-selected="false">Bài 3</button>
+              <button class="nav-link" id="bai-4-tab" data-bs-toggle="pill" data-bs-target="#bai-4" type="button" role="tab" aria-controls="bai-4" aria-selected="false">Bài 4</button>
+              <button class="nav-link" id="bai-5-tab" data-bs-toggle="pill" data-bs-target="#bai-5" type="button" role="tab" aria-controls="bai-5" aria-selected="false">Bài 5</button>
             </div>
-            <div class="col-6 d-flex flex-column justify-content-center">
-                <button class="btn btn-success mx-auto d-block" id="tinh-tien-luong">Tính tiền lương</button>
-                <div class="alert alert-success mt-3">
-                    <span>Tiền lương của bạn là:</span>
-                    <span id="ket-qua-bai-1"></span>
+            <div class="tab-content w-75" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="bai-1" role="tabpanel" aria-labelledby="bai-1-tab" tabindex="0">
+                <div class="row bg-body-secondary mb-3 p-4 fs-5">
+                    <h3 class="text-center my-3">BÀI 1: TÍNH TIỀN LƯƠNG NHÂN VIÊN</h3>
+        
+                    <div class="col-6 mt-4">
+                        <p class="fs-4">Nhập vào số ngày công và tiền lương theo ngày</p>
+                        <label for="ngay-cong">Ngày công:</label>
+                        <input type="number" class="form-control my-2" id="ngay-cong" placeholder="số ngày công">
+                        <label for="luong-ngay">Lương ngày:</label>
+                        <input type="number" class="form-control my-2" id="luong-ngay" placeholder="lương/ngày">
+                    </div>
+                    <div class="col-6 d-flex flex-column justify-content-center">
+                        <button class="btn btn-success mx-auto d-block" id="tinh-tien-luong">Tính tiền lương</button>
+                        <div class="alert alert-success mt-3">
+                            <span>Tiền lương của bạn là:</span>
+                            <span id="ket-qua-bai-1"></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="my-5 p-3 bg-body-secondary row fs-5">
-            <h3 class="text-center my-3">BÀI 2: TÍNH GIÁ TRỊ TRUNG BÌNH CỦA 5 SỐ</h3>
-            <div class="col-6">
-                <p>Hảy nhập vào 6 số thực:</p>
-                <label for="so-thu-1">Số thứ 1:</label>
-                <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-1">
-                <label for="so-thu-2">Số thứ 2:</label>
-                <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-2">
-                <label for="so-thu-3">Số thứ 3:</label>
-                <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-3">
-                <label for="so-thu-4">Số thứ 4:</label>
-                <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-4">
-                <label for="so-thu-5">Số thứ 5:</label>
-                <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-5">
-            </div>
-            <div class="col-6">
-                <div class="d-flex justify-content-center align-items-center h-100">
-                    <span class="d-block alert alert-success fs-4">Giá trị trung bình của 5 số là: <span
-                            id="ket-qua-bai-2" class="fw-bolder"></span></span>
-
+              </div>
+              <div class="tab-pane fade" id="bai-2" role="tabpanel" aria-labelledby="bai-2-tab" tabindex="0">
+                <div class="row bg-body-secondary mb-3 p-4 fs-5">
+                    <h3 class="text-center my-3">BÀI 2: TÍNH GIÁ TRỊ TRUNG BÌNH CỦA 5 SỐ</h3>
+                    <div class="col-6">
+                        <p>Hảy nhập vào 6 số thực:</p>
+                        <label for="so-thu-1">Số thứ 1:</label>
+                        <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-1">
+                        <label for="so-thu-2">Số thứ 2:</label>
+                        <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-2">
+                        <label for="so-thu-3">Số thứ 3:</label>
+                        <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-3">
+                        <label for="so-thu-4">Số thứ 4:</label>
+                        <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-4">
+                        <label for="so-thu-5">Số thứ 5:</label>
+                        <input type="number" value="0" class="nhapso form-control my-2 w-25" id="so-thu-5">
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                            <span class="d-block alert alert-success fs-4">Giá trị trung bình của 5 số là: <span
+                                    id="ket-qua-bai-2" class="fw-bolder"></span></span>
+        
+                        </div>
+                    </div>
                 </div>
+              </div>
+              <div class="tab-pane fade" id="bai-3" role="tabpanel" aria-labelledby="bai-3-tab" tabindex="0">
+                <div class="row bg-body-secondary mb-3 p-4 fs-5">
+                    <h3 class="text-center my-3">BÀI 3: QUY ĐỔI TIỀN</h3>
+                    <p>Tỉ giá quy đổi 1$ = 23.500VNĐ</p>
+                    <div class="col-6">
+                        <label for="nhap-so-tien">Số tiền:</label><br>
+                        <input type="number" class="form-control my-3 d-inline w-75" id="nhap-so-tien"><span> $</span>
+                    </div>
+                    <div class="col-6">
+                        <p>Chuyển đổi:</span></p>
+                        <p><span id="tien-quy-doi" class="fw-bolder">0</span></p>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="bai-4" role="tabpanel" aria-labelledby="bai-4-tab" tabindex="0">
+                <div class="row bg-body-secondary mb-3 p-4 fs-5">
+                    <h3 class="my-4 text-center">BÀI 4: TÍNH DIỆN TÍCH, CHU VI HÌNH CHỦ NHẬT</h3>
+                    <div class="col-6">
+                        <h3>Nhập vào chiều dài các cạnh của hình chủ nhật:</h3>
+                        <label for="chieu-dai">Chiều dài:</label>
+                        <input type="number" class="form-control my-3 w-50" id="chieu-dai">
+                        <label for="chieu-rong">Chiều rộng:</label>
+                        <input type="number" class="form-control my-3 w-50" id="chieu-rong">
+                    </div>
+                    <div class="col-6 alert alert-success ps-5 fs-3 d-flex flex-column justify-content-center mt-5">
+                        <p>Diện tích của hình chủ nhật là: <span id="dien-tich" class="fw-bolder"></span></p>
+                        <p>Chu vi của hình chủ nhật là: <span id="chu-vi" class="fw-bolder"></span></p>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="bai-5" role="tabpanel" aria-labelledby="bai-5-tab" tabindex="0">
+                <div class="row bg-body-secondary mb-3 p-4 fs-5">
+                    <h3 class="my-4 text-center">BÀI 5: TÍNH TỔNG HAI KÝ SỐ</h3>
+                        <h3>Nhập vào một số có hai chủ sô (10,11,24,99....):</h3>
+                        <input type="number" max="99" min="10" class="form-control my-3 w-50" id="chu-so">
+                        <p class="fs-4">Tổng của hai ký số của số vừa nhập vào là: <span id="tong-ky-so" class="fw-bolder">0</span></p>
+                </div>
+              </div>
             </div>
-        </div>
-        <div class="row bg-body-secondary p-4 fs-5">
-            <h3 class="text-center my-3">BÀI 3: QUY ĐỔI TIỀN</h3>
-            <p>Tỉ giá quy đổi 1$ = 23.500VNĐ</p>
-            <div class="col-6">
-                <label for="nhap-so-tien">Số tiền:</label><br>
-                <input type="number" class="form-control my-3 d-inline w-75" id="nhap-so-tien"><span> $</span>
-            </div>
-            <div class="col-6">
-                <p>Chuyển đổi:</span></p>
-                <p><span id="tien-quy-doi" class="fw-bolder">0</span></p>
-            </div>
-        </div>
-        <div class="row bg-body-secondary p-4 fs-5 mt-5">
-            <h3 class="my-4 text-center">BÀI 4: TÍNH DIỆN TÍCH, CHU VI HÌNH CHỦ NHẬT</h3>
-            <div class="col-6">
-                <h3>Nhập vào chiều dài các cạnh của hình chủ nhật:</h3>
-                <label for="chieu-dai">Chiều dài:</label>
-                <input type="number" class="form-control my-3 w-50" id="chieu-dai">
-                <label for="chieu-rong">Chiều rộng:</label>
-                <input type="number" class="form-control my-3 w-50" id="chieu-rong">
-            </div>
-            <div class="col-6 alert alert-success ps-5 fs-3 d-flex flex-column justify-content-center mt-5">
-                <p>Diện tích của hình chủ nhật là: <span id="dien-tich" class="fw-bolder"></span></p>
-                <p>Chu vi của hình chủ nhật là: <span id="chu-vi" class="fw-bolder"></span></p>
-            </div>
-        </div>
-        <div class="row bg-body-secondary p-4 fs-5 my-5">
-            <h3 class="my-4 text-center">BÀI 5: TÍNH TỔNG HAI KÝ SỐ</h3>
-                <h3>Nhập vào một số có hai chủ sô (10,11,24,99....):</h3>
-                <input type="number" max="99" min="10" class="form-control my-3 w-50" id="chu-so">
-                <p class="fs-4">Tổng của hai ký số của số vừa nhập vào là: <span id="tong-ky-so" class="fw-bolder">0</span></p>
-        </div>
+          </div>
 
     </div>
 
