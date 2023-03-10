@@ -115,6 +115,7 @@ function quyDoiTien(soSTien, tiGia) {
 document.getElementById('nhap-so-tien').onchange = function () {
     //lấy input soTien
     soTien = +this.value;
+    //output
     //quy đổi và hiển thị ra màn hình
     soTienQuyDoi = quyDoiTien(soTien, 23500);
     document.getElementById('tien-quy-doi').innerHTML = VND.format(soTienQuyDoi);
@@ -154,6 +155,7 @@ function tinhChuVi(dai, rong) {
  * hàm hiển thị diện tích, chu vi của hình chủ nhật nhập vào ra màn hình
  */
 function hienThiHCN() {
+    //output
     chuVi = tinhChuVi(chieuDai, chieuRong);
     dienTich = tinhDienTich(chieuDai, chieuRong);
     document.getElementById('dien-tich').innerHTML = dienTich;
